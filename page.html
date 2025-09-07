@@ -113,25 +113,25 @@
 <!-- 🔹 تصميم فيديو إعلاني (خاتم) -->
 <div class="item all social relative shadow-lg hover:shadow-xl transition rounded-xl overflow-hidden group">
   <a href="acc/O2.mp4" target="_blank" rel="noopener noreferrer">
-    <video src="acc/O2.mp4" class="w-full h-auto" controls></video>
+    <video src="acc/O2.mp4" poster="acc/O2.jpg" class="w-full h-auto" controls></video>
     <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white transition">
       <p class="mb-2">تصميمي للستوري إعلاني عن منتج بفكرة إبداعية</p>
-              <span class="px-3 py-1 bg-[var(--accent)] rounded-md text-xs">اضغط هنا</span>
-
+      <span class="px-3 py-1 bg-[var(--accent)] rounded-md text-xs">اضغط هنا</span>
     </div>
   </a>
 </div>
 
+
 <!-- فيديو إعلان -->
 <div class="item all social relative shadow-lg hover:shadow-xl transition rounded-xl overflow-hidden group">
-    <a href="acc/video1.mp4" target="_blank" rel="noopener noreferrer">
-      <video src="acc/video1.mp4" controls class="w-full h-auto"></video>
-      <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white transition">
-        <p class="mb-2">فيديو إعلاني</p>
-        <span class="px-3 py-1 bg-[var(--accent)] rounded-md text-xs">اضغط هنا</span>
-      </div>
-    </a>
-  </div>
+  <a href="acc/video5.mp4" target="_blank" rel="noopener noreferrer">
+    <video src="acc/video5.mp4" poster="acc/15.jpeg" controls class="w-full h-auto"></video>
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white transition">
+      <p class="mb-2">فيديو إعلاني</p>
+      <span class="px-3 py-1 bg-[var(--accent)] rounded-md text-xs">اضغط هنا</span>
+    </div>
+  </a>
+</div>
 
   <!-- جرافيك -->
  
@@ -215,39 +215,28 @@
   </div>
 
   <!-- فيديوهات -->
-  <div class="item all web social relative shadow-lg hover:shadow-xl transition rounded-xl overflow-hidden group">
-  <video src="acc/video2.mp4" controls class="w-full h-auto"></video>
+<!-- نسخة قسم الجرافيك (تظهر في الكل + الجرافيك) -->
+<div class="item social web relative shadow-lg hover:shadow-xl transition rounded-xl overflow-hidden group">
+  <video src="acc/video1.mp4" poster="acc/11.jpeg" controls class="w-full h-auto"></video>
   <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white transition">
-    <p class="mb-2">فيديو إعلاني</p>
+    <p class="mb-2">فيديو إعلاني للمتجر الإلكتروني تم تصميمه بالكامل</p>
     <span class="px-3 py-1 bg-[var(--accent)] rounded-md text-xs">اضغط هنا</span>
   </div>
 </div>
 
 
-  <div class="item all social relative shadow-lg hover:shadow-xl transition rounded-xl overflow-hidden group">
-    <a href="acc/video5.mp4" target="_blank" rel="noopener noreferrer">
-      <video src="acc/video5.mp4" controls class="w-full h-auto"></video>
-      <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white transition">
-        <p class="mb-2">فيديو إعلاني</p>
-        <span class="px-3 py-1 bg-[var(--accent)] rounded-md text-xs">اضغط هنا</span>
-      </div>
-    </a>
-  </div>
 
 
 
-
-
-
-  <div class="item all social relative shadow-lg hover:shadow-xl transition rounded-xl overflow-hidden group">
-    <a href="acc/video4.mp4" target="_blank" rel="noopener noreferrer">
-      <video src="acc/video4.mp4" controls class="w-full h-auto"></video>
-      <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white transition">
-        <p class="mb-2">فيديو إعلاني</p>
-        <span class="px-3 py-1 bg-[var(--accent)] rounded-md text-xs">اضغط هنا</span>
-      </div>
-    </a>
-  </div>
+<div class="item all social relative shadow-lg hover:shadow-xl transition rounded-xl overflow-hidden group">
+  <a href="acc/video4.mp4" target="_blank" rel="noopener noreferrer">
+    <video src="acc/video4.mp4" poster="acc/14.jpeg" controls class="w-full h-auto"></video>
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white transition">
+      <p class="mb-2">فيديو إعلاني</p>
+      <span class="px-3 py-1 bg-[var(--accent)] rounded-md text-xs">اضغط هنا</span>
+    </div>
+  </a>
+</div>
 
 
 
@@ -432,26 +421,7 @@
 
 <!-- ✅ سكربت الفلترة -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const filterButtons = document.querySelectorAll(".portfolio-filter li");
-  const items = document.querySelectorAll(".portfolio-grid .item");
 
-  filterButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      filterButtons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const filter = btn.getAttribute("data-filter");
-      items.forEach((item) => {
-        if (filter === "*" || item.classList.contains(filter.slice(1))) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
-    });
-  });
-});
 function toggleDarkMode() {
   const body = document.body;
   const btn = document.getElementById("darkModeBtn");
@@ -465,6 +435,35 @@ function toggleDarkMode() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".portfolio-filter li");
+  const items = Array.from(document.querySelectorAll(".portfolio-grid .item"));
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // شيل active من الكل
+      filterButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.getAttribute("data-filter").replace(".", "");
+
+      let matching;
+      if (filter === "*") {
+        // "الكل" → استبعد العناصر اللي عندها hide-in-all
+        matching = items.filter(it => !it.classList.contains("hide-in-all"));
+      } else {
+        // باقي التبويبات
+        matching = items.filter(it => it.classList.contains(filter));
+      }
+
+      // اخفي الكل بالأول
+      items.forEach(it => it.style.display = "none");
+
+      // طلع المطابق
+      matching.forEach(it => it.style.display = "block");
+    });
+  });
+});
 </script>
 
 

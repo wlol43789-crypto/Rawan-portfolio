@@ -1299,3 +1299,18 @@ header nav ul li a:hover {
 [data-theme="dark-navy"] header .text-xl {
   color: #fff !important;
 }
+
+/* إخفاء العناصر اللي عليها hide-in-all عند اختيار تبويب "الكل" */
+.portfolio-filter li.active[data-filter="*"] ~ .portfolio-grid .hide-in-all {
+  display: none !important;
+}
+
+/* افتراضياً كل العناصر تظهر */
+.portfolio-grid .item {
+  display: block;
+}
+
+/* لما يكون زر "الكل" مفعّل */
+.portfolio-filter li.active[data-filter="*"] ~ .portfolio-grid .hide-in-all {
+  display: none !important;
+}
